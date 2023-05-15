@@ -1,0 +1,17 @@
+{
+  "name": "owo",
+  "version": "1.0.0",
+  "description": "a mod for owo",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "dream",
+  "license": "ISC",
+  "keywords": [
+    "owo"
+  ],
+  "dependencies": {
+    "discord.js-selfbot-v13": "^2.14.0"
+  }
+}
