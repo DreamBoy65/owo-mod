@@ -60,8 +60,6 @@ client.on("messageCreate", async (msg) => {
           data.cashEarned
         }\n**CommandsUsed:** ${
           data.commandsUsed
-        }\n\n=====*BATTLE*=====\n**Win(s):** ${data.won}\n**Lose(s):** ${
-          data.lost
         }\n\n=====*ZOO*=====\n${Object.keys(data.zoo)
           .map((e) => {
             return `${e}x${data.zoo[e]}`;
@@ -74,8 +72,6 @@ client.on("messageCreate", async (msg) => {
           dat.cashEarned
         }\n**CommandsUsed:** ${
           dat.commandsUsed
-        }\n\n=====*BATTLE*=====\n**Win(s):** ${dat.won}\n**Lose(s):** ${
-          dat.lost
         }\n\n=====*ZOO*=====\n${Object.keys(dat.zoo)
           .map((e) => {
             return `${e}x${dat.zoo[e]}`;
@@ -104,9 +100,13 @@ client.on("messageCreate", async (msg) => {
     }
 
     if (msg.content.includes("found")) {
-      let zoos = msg.content.split("found:")[1].split("<")[0].trim().split(" ");
+      let zoos = msg.content
+        .split("found:")[1]
+        ?.split("<")[0]
+        ?.trim()
+        .split(" ");
 
-      zoos.forEach((e) => {
+      zoos?.forEach((e) => {
         if (e.includes("<") && e.includes(">")) {
           let i = e.match(/(?<=:)([^:\s]+)(?=:)/g);
           if (data["zoo"][i[0]]) {
@@ -164,7 +164,6 @@ client.on("messageUpdate", async (message) => {
     if (msg.embeds[0].footer.text.includes("won")) {
       data["won"] += 1;
       dat["won"] += 1;
-
     } else if (msg.embeds[0].footer.text.includes("lost")) {
       data["lost"] += 1;
       dat["lost"] += 1;
