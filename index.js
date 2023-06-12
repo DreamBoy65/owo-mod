@@ -160,7 +160,7 @@ client.on("messageUpdate", async (message) => {
     msg.embeds[0]?.author?.name?.includes(client.user.username) &&
     msg.embeds[0]?.author?.name?.includes("battle")
   ) {
-    prev = msg.msg.embeds[0].footer.text;
+    prev = msg.embeds[0].footer.text;
     if (msg.embeds[0].footer.text.includes("won")) {
       data["won"] += 1;
       dat["won"] += 1;
