@@ -9,7 +9,9 @@ const {
 } = require("fs/promises");
 
 class Help {
-  constructor() {}
+  constructor() {
+    this.isOkay = true;
+  }
 
   async setup() {
     this.oldDb = await this.getDB();
@@ -60,7 +62,7 @@ class Help {
         this.currentDb.cash = 0;
       }
     }
-    
+
     if (add) {
       this.oldDb[key] += value;
       this.currentDb[key] += value;

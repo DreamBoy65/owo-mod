@@ -2,7 +2,7 @@ module.exports = async (msg) => {
   const { client, channel, guild, author, content } = msg;
   if (author.id !== "408785106942164992") return;
   if (content.toLowerCase().includes("verify")) {
-    client.isOkay = false;
+    client.help.isOkay = false;
     return client.help.log("Verify");
   }
 

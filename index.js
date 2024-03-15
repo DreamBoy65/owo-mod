@@ -11,7 +11,6 @@ const client = new Client({
 require("@colors/colors");
 
 client.help = new (require("./function"))();
-client.isOkay = true;
 
 client.on("ready", async () => {
   // ready
@@ -50,7 +49,7 @@ async function setup() {
   if (!channel) return help.warn(">>> No channel found.");
 
   for (let i = 0; i < Infinity; i++) {
-    if (!client.isOkay) continue;
+    if (!help.isOkay) continue;
 
     await send("owo hunt");
     await send("owo battle");
