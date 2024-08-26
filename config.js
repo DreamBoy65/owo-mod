@@ -1,7 +1,7 @@
 module.exports = {
   token:
     "",
-  channel: "1187655235229995058",
+  channel: "",
   data: "data.json",
   cf: {
     enable: true,
